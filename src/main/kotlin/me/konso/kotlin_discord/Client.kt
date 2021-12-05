@@ -20,7 +20,7 @@ class Client: ListenerAdapter() {
             .setPrefix(commandPrefix) // 接頭辞
             .setOwnerId("")
             .setActivity(Activity.competing("スマブラ"))
-            .addCommands(Neko(), Capitalize(), Ping(), Info(), Summon())
+            .addCommands(Neko(), Capitalize(), Ping(), Info())
             .build()
 
         jda = JDABuilder.createLight(token,

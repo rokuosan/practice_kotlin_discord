@@ -11,7 +11,8 @@ class Ping: Command() {
 
     override fun execute(event: CommandEvent?) {
         event?: return
-        event.reply("Pong!:\n- gatewayPing is ${event.jda.gatewayPing}ms")
+        val time: Long = System.currentTimeMillis()
+        event.reply("Pong!:\n- gatewayPing is ${event.jda.gatewayPing}ms\n- ProcessPing is ${System.currentTimeMillis() -  time}ms")
     }
 
 }
